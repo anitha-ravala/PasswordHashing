@@ -6,7 +6,9 @@ About The Project
 JumpCloud has implemented a password hashing application in Golang. This application supports 3 end points 
 
   ○ A POST to /hash should accept a password. It should return a job identifier immediately. It should then wait 5 seconds and compute the password hash. 
+  
   ○ A GET to /hash should accept a job identifier. It should return the base64 encoded password hash for the corresponding POST request.
+  
   ○ A GET to /stats should accept no data. It should return a JSON data structure for the total hash requests since the server started and the average time of a hash request in     milliseconds.
   
 This software should be able to process multiple connections simultaneously. The software should support a graceful shutdown request. Meaning, it should allow any
