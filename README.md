@@ -1,7 +1,7 @@
 # PasswordHashing
 
 
-About The Project
+About the Project
 
 JumpCloud has implemented a password hashing application in Golang. This application supports 3 end points 
 
@@ -28,7 +28,8 @@ Prerequisites
  
 2. Download and install 7zip
 https://www.7-zip.org/download.html
-For Windows
+
+3. Curl for Windows or Gitbach
 
 Installation
 
