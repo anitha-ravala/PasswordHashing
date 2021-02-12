@@ -3,15 +3,42 @@
 
 
 Table of Contents
+
+
 About The Project
 
-For this assignment, JumpCloud has implemented a password hashing application in Golang
-and we have intentionally left bugs in it. The assignment is to write the test cases needed to
-test the application, explain your choices for coverage, execute the test cases and report the
-bugs you find. Deliverables should be submitted along with a README in a GitHub repo that
-you share with us.
-The style, depth, scope and type of tests and bug reports you write are up to you. Use them to
-demonstrate your style and strengths.
+Password Hashing Application Specification
+The following is the requirement specification that was used in building the password hashing
+application. It describes what the application should do.
+● When launched, the application should wait for http connections.
+● It should answer on the PORT specified in the PORT environment variable.
+● It should support three endpoints:
+○ A POST to /hash should accept a password. It should return a job identifier
+immediately. It should then wait 5 seconds and compute the password hash.
+The hashing algorithm should be SHA512.
+○ A GET to /hash should accept a job identifier. It should return the base64
+encoded password hash for the corresponding POST request.
+○ A GET to /stats should accept no data. It should return a JSON data structure
+for the total hash requests since the server started and the average time of a
+hash request in milliseconds.
+● The software should be able to process multiple connections simultaneously.
+● The software should support a graceful shutdown request. Meaning, it should allow any
+in-flight password hashing to complete, reject any new requests, respond with a 200 and
+shutdown.
+● No additional password requests should be allowed when shutdown is pending.
+Interacting with the Password Hashing Application
+
+Getting Started
+This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
+
+Prerequisites
+This is an example of how to list things you need to use the software and how to install them.
+
+npm
+npm install npm@latest -g
+
+Installation
+
 Obtaining the Password Hashing Application
 We are storing the password hashing application in a public S3 bucket. You can get it in the
 following manner:
@@ -43,26 +70,7 @@ We tested the password hashing application on the following operating systems:
 ● Ubuntu 16.04
 ● Mac OS X - Sierra, High Sierra
 ● Windows 10
-Password Hashing Application Specification
-The following is the requirement specification that was used in building the password hashing
-application. It describes what the application should do.
-● When launched, the application should wait for http connections.
-● It should answer on the PORT specified in the PORT environment variable.
-● It should support three endpoints:
-○ A POST to /hash should accept a password. It should return a job identifier
-immediately. It should then wait 5 seconds and compute the password hash.
-The hashing algorithm should be SHA512.
-○ A GET to /hash should accept a job identifier. It should return the base64
-encoded password hash for the corresponding POST request.
-○ A GET to /stats should accept no data. It should return a JSON data structure
-for the total hash requests since the server started and the average time of a
-hash request in milliseconds.
-● The software should be able to process multiple connections simultaneously.
-● The software should support a graceful shutdown request. Meaning, it should allow any
-in-flight password hashing to complete, reject any new requests, respond with a 200 and
-shutdown.
-● No additional password requests should be allowed when shutdown is pending.
-Interacting with the Password Hashing Application
+
 You can interact/test the application using curl. The following are examples that would/should
 generate similar returns - the job identifier does not need to conform to a specification.
 ● Post to the /hash endpoint
