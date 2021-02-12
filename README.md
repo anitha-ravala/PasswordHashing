@@ -2,9 +2,20 @@
 
 
 
-Table of Contents
+#Table of Contents
 
-
+About The Project
+Built With
+Getting Started
+Prerequisites
+Installation
+Usage
+Roadmap
+Contributing
+License
+Contact
+Acknowledgements
+About The Project
 About The Project
 
 Password Hashing Application Specification
