@@ -14,11 +14,10 @@ JumpCloud has implemented a password hashing application in Golang. This applica
 This software should be able to process multiple connections simultaneously. The software should support a graceful shutdown request. Meaning, it should allow any
 in-flight password hashing to complete, reject any new requests, respond with a Service Unavailable and shutdown.No additional password requests should be allowed when shutdown is pending.
 
-Interacting with the Password Hashing Application
-
 Built With
   
   ○ SHA152 algorithm
+
 
 Getting Started
 
@@ -66,15 +65,3 @@ Your Name - @your_twitter - email@example.com
 
 Project Link: https://github.com/your_username/repo_name
 
-Acknowledgements
-GitHub Emoji Cheat Sheet
-Img Shields
-Choose an Open Source License
-GitHub Pages
-Animate.css
-Loaders.css
-Slick Carousel
-Smooth Scroll
-Sticky Kit
-JVectorMap
-Font Awesome
