@@ -1,7 +1,7 @@
  # Password Hashing Application
 
 
-#About the Project
+##About the Project
 
 JumpCloud has implemented a password hashing application in Golang. This application supports 3 end points 
 
@@ -43,7 +43,7 @@ Go to powershell and run the command “iwr -Uri https://s3.amazonaws.com/qa-bro
 5. Run the broken-hashserve_win.exe 
 6. Open new CMD window after PORT variable is created
 
-#Usage
+##Usage
 
 You can interact with the application using curl. The following are examples that would/should generate similar returns - the job identifier does not need to conform to a specification.
 ●  To Post to the /hash endpoint
