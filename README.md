@@ -32,7 +32,7 @@ https://www.7-zip.org/download.html
 
 ### Installation
 
-For Windows
+## For Windows 10 Operating System
 
 1. Either Click on url : https://s3.amazonaws.com/qa-broken-hashserve/broken-hashserve.tgz 
 or
@@ -46,28 +46,32 @@ Go to powershell and run the command “iwr -Uri https://s3.amazonaws.com/qa-bro
 ## Usage
 
 You can interact with the application using curl. The following are examples that would/should generate similar returns - the job identifier does not need to conform to a specification.
-●  To Post to the /hash endpoint
-Use the below commandto POST 
-$ curl -X POST -H "Content-Type:application/json" -d "{\"password\":\"angrymonkey\"}" http://127.0.0.1:8088/hash
-Application will display the job identifier as 1 for the first job 
 
-● To Get the base64 encoded password
-Use the following command
-$ curl -H "application/json" http://127.0.0.1:8088/hash/1
-Application will display a hash. For example see the below
-> zHkbvZDdwYYiDnwtDdv/FIWvcy1sKCb7qi7Nu8Q8Cd/MqjQeyCI0pWKDGp74A1g==
-● To Get the stats
-Use the below command
-$ curl http://127.0.0.1:8088/stats
-Application will display TotalRequests along with AverageTime as below in JSON format 
-> {"TotalRequests":3,"AverageTime":5004625}
-● To Shutdown the application use the below command
-curl -X POST -d "shutdown" http://127.0.0.1:8088/hash
-Application will shutdown 
+ #### To Post to the /hash endpoint
+    Use the below command to POST 
+    $ curl -X POST -H "Content-Type:application/json" -d "{\"password\":\"angrymonkey\"}" http://127.0.0.1:8088/hash
+    Application will display the job identifier as 1 for the first job 
+
+#### To Get the base64 encoded password
+   Use the following command
+   $ curl -H "application/json" http://127.0.0.1:8088/hash/1
+   Application will display a hash. For example see the below
+   > zHkbvZDdwYYiDnwtDdv/FIWvcy1sKCb7qi7Nu8Q8Cd/MqjQeyCI0pWKDGp74A1g==
+
+#### To Get the stats
+   Use the below command
+   $ curl http://127.0.0.1:8088/stats
+   Application will display TotalRequests along with AverageTime as below in JSON format 
+   > {"TotalRequests":3,"AverageTime":5004625}
+   
+#### To Shutdown the application 
+   Use the below command
+   curl -X POST -d "shutdown" http://127.0.0.1:8088/hash
+   Application will shutdown 
 
  
-Contact
+## Contact
 Anitha Ravala - email@anitha.ravala@gmail.com
 
-Project Link: https://github.com/your_username/repo_name
+## Issues Link Project Link: https://github.com/your_username/repo_name
 
