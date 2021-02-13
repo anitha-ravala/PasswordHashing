@@ -1,4 +1,4 @@
-# PasswordHashing
+# Password Hashing Application
 
 
 About the Project
@@ -42,26 +42,31 @@ Go to powershell and run the command “iwr -Uri https://s3.amazonaws.com/qa-bro
 4. Unzip the broken-hashserve.tar” file and this create a folder with application versions for each OS. For ex: windows have “broken-hashserve_win.exe
 5. Run the broken-hashserve_win.exe 
 6. Open new CMD window after PORT variable is created
-7 $ curl -X POST -H "Content-Type:application/json" -d '{"password":"angrymonkey"}' http://127.0.0.1:8088/hash
 
 Interacting with the Password Hashing Application
 
 You can interact with the application using curl. The following are examples that would/should generate similar returns - the job identifier does not need to conform to a specification.
-● Post to the /hash endpoint
-$ curl -X POST -H "Content-Type:application/json" -d '{"password":"angrymonkey"}' http://127.0.0.1:8088/hash
-> 42
-● Get the base64 encoded password
+●  To Post to the /hash endpoint
+Use the below commandto POST 
+$ curl -X POST -H "Content-Type:application/json" -d "{\"password\":\"angrymonkey\"}" http://127.0.0.1:8088/hash
+Application will display the job identifier as 1 for the first job 
+● To Get the base64 encoded password
+Use the following command
 $ curl -H "application/json" http://127.0.0.1:8088/hash/1
+Application will display a hash. For example see the below
 > zHkbvZDdwYYiDnwtDdv/FIWvcy1sKCb7qi7Nu8Q8Cd/MqjQeyCI0pWKDGp74A1g==
-● Get the stats
+● To Get the stats
+Use the below command
 $ curl http://127.0.0.1:8088/stats
+Application will display TotalRequests along with AverageTime as below in JSON format 
 > {"TotalRequests":3,"AverageTime":5004625}
-● Shutdown
+● To Shutdown the application use the below command
 curl -X POST -d "shutdown" http://127.0.0.1:8088/hash
-> 200 Empty Response
+Application will shutdown 
+
  
 Contact
-Your Name - @your_twitter - email@example.com
+Anitha Ravala - email@anitha.ravala@gmail.com
 
 Project Link: https://github.com/your_username/repo_name
 
