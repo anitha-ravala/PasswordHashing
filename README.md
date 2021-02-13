@@ -1,7 +1,7 @@
  # Password Hashing Application
 
 
-##About the Project
+## About the Project
 
 JumpCloud has implemented a password hashing application in Golang. This application supports 3 end points 
 
@@ -14,14 +14,14 @@ JumpCloud has implemented a password hashing application in Golang. This applica
 This software should be able to process multiple connections simultaneously. The software should support a graceful shutdown request. Meaning, it should allow any
 in-flight password hashing to complete, reject any new requests, respond with a Service Unavailable and shutdown.No additional password requests should be allowed when shutdown is pending.
 
-Built With
+## Built With
   
   ○ SHA152 algorithm
 
 
-Getting Started
+## Getting Started
 
-Prerequisites
+ ### Prerequisites
 
 1. Set up the PORT to 8088 under Environment Variables
  
@@ -30,7 +30,7 @@ https://www.7-zip.org/download.html
 
 3. Curl for Windows or Gitbach
 
-Installation
+### Installation
 
 For Windows
 
@@ -43,7 +43,7 @@ Go to powershell and run the command “iwr -Uri https://s3.amazonaws.com/qa-bro
 5. Run the broken-hashserve_win.exe 
 6. Open new CMD window after PORT variable is created
 
-##Usage
+## Usage
 
 You can interact with the application using curl. The following are examples that would/should generate similar returns - the job identifier does not need to conform to a specification.
 ●  To Post to the /hash endpoint
