@@ -67,9 +67,10 @@ You can interact with the application using curl. The following are examples tha
    curl -X POST -d "shutdown" http://127.0.0.1:8088/hash
    Application will shutdown 
 
+####Screenshots link :https://github.com/anitha-ravala/PasswordHashing/issues/6
  
 ## Contact
 Anitha Ravala - email@anitha.ravala@gmail.com
 
-## Issues Link : 
+## Issues Link : https://github.com/issues
 
