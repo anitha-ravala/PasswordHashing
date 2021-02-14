@@ -46,26 +46,30 @@ Go to powershell and run the command “iwr -Uri https://s3.amazonaws.com/qa-bro
 You can interact with the application using curl. The following are examples that would/should generate similar returns - the job identifier does not need to conform to a specification.
 
  ### To Post to the /hash endpoint
-    Use the below command to POST 
-    $ curl -X POST -H "Content-Type:application/json" -d "{\"password\":\"angrymonkey\"}" http://127.0.0.1:8088/hash
-    Application will display the job identifier as 1 for the first job 
+ 
+   -  Use the below command to POST 
+      $ curl -X POST -H "Content-Type:application/json" -d "{\"password\":\"angrymonkey\"}" http://127.0.0.1:8088/hash
+   -  Application will display the job identifier as 1 for the first job 
 
 ### To Get the base64 encoded password
-   Use the following command
-   $ curl -H "application/json" http://127.0.0.1:8088/hash/1
-   Application will display a hash. For example see the below
-   > zHkbvZDdwYYiDnwtDdv/FIWvcy1sKCb7qi7Nu8Q8Cd/MqjQeyCI0pWKDGp74A1g==
+
+   - Use the following command
+     $ curl -H "application/json" http://127.0.0.1:8088/hash/1
+  -  Application will display a hash. For example see the below
+     > zHkbvZDdwYYiDnwtDdv/FIWvcy1sKCb7qi7Nu8Q8Cd/MqjQeyCI0pWKDGp74A1g==
 
 ### To Get the stats
-   Use the below command
-   $ curl http://127.0.0.1:8088/stats
-   Application will display TotalRequests along with AverageTime as below in JSON format 
-   > {"TotalRequests":3,"AverageTime":5004625}
+
+   - Use the below command
+     $ curl http://127.0.0.1:8088/stats
+   - Application will display TotalRequests along with AverageTime as below in JSON format 
+     > {"TotalRequests":3,"AverageTime":5004625}
    
 ### To Shutdown the application 
-   Use the below command
-   curl -X POST -d "shutdown" http://127.0.0.1:8088/hash
-   Application will shutdown 
+
+   - Use the below command
+     curl -X POST -d "shutdown" http://127.0.0.1:8088/hash
+   - Application will shutdown 
 
 ####Screenshots link :https://github.com/anitha-ravala/PasswordHashing/issues/6
  
